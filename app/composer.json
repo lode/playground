@@ -1,0 +1,16 @@
+{
+	"autoload": {
+		"psr-4": {
+			"Playground\\": ""
+		}
+	},
+	"require": {
+		"php": ">=8.2",
+		"ext-intl": "*",
+		"ext-pdo": "*",
+		"filp/whoops": "^2.15"
+	},
+	"config": {
+		"sort-packages": true
+	}
+}
