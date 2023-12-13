@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+EGID=$(id -g $EUID)
+docker compose build --build-arg USER_ID=${EUID} --build-arg GROUP_ID=${EGID}
