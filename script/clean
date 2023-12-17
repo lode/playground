@@ -2,4 +2,4 @@
 
 docker image rm playground-application mariadb
 
-./clean-database
+./script/clean-database
