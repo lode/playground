@@ -16,6 +16,8 @@ services:
   
   database:
     image: mariadb:latest
+    ports:
+      - 13306:3306
     volumes:
       - type: volume
         source: playground-database
