@@ -3,6 +3,11 @@
 Dockerized playground
 
 
+## Requirements
+
+- [Docker](https://docs.docker.com/engine/install/)
+
+
 ## Setup
 
 ### Example app
