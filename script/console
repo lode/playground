@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-docker-compose exec php-fpm bash
+docker compose exec -u developer php-fpm bash

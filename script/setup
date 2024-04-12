@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 
-export UID=$(id -u)
-export GID=$(id -g)
+# get the host's user id to sync with the docker's user id
+EGID=$(id -g $EUID)
+if [[ $EUID == 0 ]]; then
+   echo "don't run this as root, else all files inside Docker will be inaccessible to your local user " 1>&2
+   exit 1
+fi
 
-docker-compose up --build
+# build docker
+docker compose build --build-arg USER_ID=${EUID} --build-arg GROUP_ID=${EGID} "$@"
+
+# keep docker's bash history across sessions and/or clean/setup
+#touch ./phpdocker/data/bash_history

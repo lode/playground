@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+docker compose logs -t --tail=250 -f
