@@ -20,9 +20,6 @@ fi
 # build docker
 docker compose build --build-arg USER_ID=${EUID} --build-arg GROUP_ID=${EGID} "$@"
 
-# keep docker's bash history across sessions and/or clean/setup
-#touch ./phpdocker/data/bash_history
-
 echo
 echo "optionally change /etc/hosts to add a line with: 127.0.0.1 application.local"
 echo "you can use any hostname you want, default available on localhost"

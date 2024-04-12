@@ -27,9 +27,11 @@ Note: use `./script/*` for managing docker instead of the control panel of Docke
 
 ## Setup & Usage
 
-See [script/README.md](/script/README.md)
+See [script/README.md](/script/README.md).
+
+Note: the `docker/README.md` isn't actual on port numbers and file permissions.
 
 
 ## Connecting to database
 
-- MySQL: see configuration in `.env.dist`, use `SQL_PORT_EXTERNAL`.
+See configuration in `.env.dist`, use `SQL_PORT_EXTERNAL`.
