@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
-export UID=$(id -u)
-export GID=$(id -g)
+set -e
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+cd $SCRIPT_DIR/..
 
 docker compose up --detach
 
 echo
-echo "open http://lend-engine-app.local"
+echo "open http://application.local"
 echo

@@ -1,5 +1,15 @@
 #!/usr/bin/env bash
 
+set -e
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+cd $SCRIPT_DIR/..
+
+# create .env file if it doesn't exist
+test -f ./.env || {
+    echo "creating .env file"
+    cp .env.dist .env
+}
+
 # get the host's user id to sync with the docker's user id
 EGID=$(id -g $EUID)
 if [[ $EUID == 0 ]]; then
@@ -14,5 +24,6 @@ docker compose build --build-arg USER_ID=${EUID} --build-arg GROUP_ID=${EGID} "$
 #touch ./phpdocker/data/bash_history
 
 echo
-echo "change /etc/hosts to add a line with: 127.0.0.1 lend-engine-app.local"
+echo "optionally change /etc/hosts to add a line with: 127.0.0.1 application.local"
+echo "you can use any hostname you want, default available on localhost"
 echo
