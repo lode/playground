@@ -1,5 +1,6 @@
 # playground-retry
 
+
 ## To Do
 
 - Add custom bashrc
@@ -24,11 +25,11 @@
 Note: use `./script/*` for managing docker instead of the control panel of Docker Desktop for Mac.
 
 
-## First time setup
+## Setup & Usage
 
 See [script/README.md](/script/README.md)
 
 
 ## Connecting to database
 
-- MySQL: `developer:secret@localhost:13003`
+- MySQL: see configuration in `.env.dist`, use `SQL_PORT_EXTERNAL`.
