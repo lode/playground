@@ -1,10 +1,4 @@
-# playground-retry
-
-
-## To Do
-
-- Add custom bashrc
-- Setup XDebug
+# Dev Playground with Docker
 
 
 ## Install
@@ -35,3 +29,9 @@ Note: the `docker/README.md` isn't actual on port numbers and file permissions.
 ## Connecting to database
 
 See configuration in `.env.dist`, use `SQL_PORT_EXTERNAL`.
+
+
+## To Do
+
+- Add custom bashrc
+- Setup XDebug
