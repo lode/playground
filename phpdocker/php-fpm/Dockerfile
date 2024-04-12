@@ -10,8 +10,6 @@ ARG GROUP_ID
 RUN groupadd -f developers
 RUN echo "creating user with UID=${USER_ID} AND GID=${GROUP_ID}"
 RUN useradd -u ${USER_ID} -g ${GROUP_ID} -d /home/developer -g developers -m -s /bin/bash developer 2>/dev/null
-#RUN mkdir -m700 /home/developer/.ssh/ && ssh-keyscan github.com >> /home/developer/.ssh/known_hosts
-#RUN chown developer:developers /home/developer/.ssh/
 
 RUN apt-get update \
     && apt-get -y --no-install-recommends install \

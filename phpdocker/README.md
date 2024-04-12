@@ -30,8 +30,8 @@ add your own hostname on your `/etc/hosts`
 
 Service|Address outside containers
 -------|--------------------------
-Webserver|[localhost:13000](http://localhost:13000)
-MariaDB|**host:** `localhost`; **port:** `13003`
+Webserver|[localhost:9000](http://localhost:9000)
+MySQL|**host:** `localhost`; **port:** `9002`
 
 ## Hosts within your environment ##
 
@@ -40,7 +40,7 @@ You'll need to configure your application to use any services you enabled:
 Service|Hostname|Port number
 ------|---------|-----------
 php-fpm|php-fpm|9000
-MariaDB|mariadb|3306 (default)
+MySQL|mysql|3306 (default)
 
 # Docker compose cheatsheet #
 
