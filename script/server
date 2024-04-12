@@ -4,3 +4,7 @@ export UID=$(id -u)
 export GID=$(id -g)
 
 docker compose up --detach
+
+echo
+echo "open http://lend-engine-app.local"
+echo
