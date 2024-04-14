@@ -16,7 +16,9 @@ Inspired by https://github.com/github/scripts-to-rule-them-all.
 
 ## Console
 
+- `./script/console <command>`: run a single command in Docker
 - `./script/console`: get a bash into Docker
+- `./script/root_console`: get a bash _as root_ in Docker, for installing OS packages
 
 
 ## Debug

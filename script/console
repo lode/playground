@@ -4,4 +4,8 @@ set -e
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 cd $SCRIPT_DIR/..
 
-docker compose exec -u developer php-fpm bash
+if [[ $# -eq 0 ]]; then
+	docker compose exec --user developer php-fpm bash
+else
+	docker compose exec --user developer php-fpm "$@"
+fi
