@@ -4,4 +4,4 @@ set -e
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 cd $SCRIPT_DIR/..
 
-docker compose logs -t --tail=250 -f
+docker compose logs --timestamps --tail=250 --follow
