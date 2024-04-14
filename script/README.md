@@ -6,6 +6,7 @@ Inspired by https://github.com/github/scripts-to-rule-them-all.
 ## First run
 
 - `./script/setup`
+- `./script/server`
 
 
 ## Starting / stopping
