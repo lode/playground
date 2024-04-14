@@ -26,5 +26,4 @@ Inspired by https://github.com/github/scripts-to-rule-them-all.
 
 ## Restart
 
-- `./script/clean`
-- `./script/setup --no-cache`
+- `./script/reset`
