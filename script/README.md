@@ -8,6 +8,8 @@ Inspired by https://github.com/github/scripts-to-rule-them-all.
 - `./script/setup`
 - `./script/server`
 
+See further instructions in [README.md](/README.md).
+
 
 ## Starting / stopping
 

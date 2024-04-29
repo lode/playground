@@ -1,34 +1,38 @@
 # Dev Playground with Docker
 
+To get started clone the repository and open a terminal inside the repository directory.
+
 
 ## Install
 
-### Linux
+- Install: [Docker Desktop on Mac](https://docs.docker.com/desktop/install/mac-install/), [Docker Engine is enough for Linux](https://docs.docker.com/engine/install/ubuntu/)
+    - Mac: no need to sign in with a Docker account when the installer asks you to.
+    - Mac: under 'Settings' -> 'General' disable 'SBOM indexing'.
+    - Mac: use `./script/*` for managing docker instead of the control panel of Docker Desktop for Mac.
+    - Linux: follow [Docker post-installation](https://docs.docker.com/engine/install/linux-postinstall/) to manage docker without root.
 
-- [Docker 25.0.4 or higher](https://docs.docker.com/engine/install/ubuntu/)
-- You must add your user to the `docker` group. See [Linux postinstall](https://docs.docker.com/engine/install/linux-postinstall/).
-
-### OSX
-
-- OSX 14.4 (Sonoma)
-- Git (Can be [installed](https://git-scm.com/download/mac) with [brew](https://brew.sh/) or as part of XCode).
-- [Docker for Mac 4.28.0 or higher](https://docs.docker.com/docker-for-mac/install/).
-    - No need to sign in with a Docker account when the installer asks you to.
-- Under 'Settings' -> 'General' disable 'SBOM indexing'.
-
-Note: use `./script/*` for managing docker instead of the control panel of Docker Desktop for Mac.
+- Run `./script/setup`
+- Run `./script/server`
 
 
-## Setup & Usage
+## Usage after first setup
 
-See [script/README.md](/script/README.md).
+- Start server: `./script/server`
+- See [the script/ directory](/script/README.md) for more commands
 
-Note: the `docker/README.md` isn't actual on port numbers and file permissions.
 
+## Connect to the database
 
-## Connecting to database
+Connect to the database from outside Docker:
 
-See configuration in `.env.dist`, use `SQL_PORT_EXTERNAL`.
+- hostname: `localhost`
+- port: see `SQL_PORT_EXTERNAL` in `docker.env`
+- username/password: see values in `docker.env`
+
+For managing databases:
+
+- username: `root`
+- password: `root-secret`
 
 
 ## To Do
