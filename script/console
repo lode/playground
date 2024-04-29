@@ -4,8 +4,10 @@ set -e
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 cd $SCRIPT_DIR/..
 
+ENVIRONMENT_FILES="--env-file docker.env.dist --env-file docker.env"
+
 if [[ $# -eq 0 ]]; then
-	docker compose exec --user developer php-fpm bash
+	docker compose $ENVIRONMENT_FILES exec --user developer php-fpm bash
 else
-	docker compose exec --user developer php-fpm "$@"
+	docker compose $ENVIRONMENT_FILES exec --user developer php-fpm "$@"
 fi

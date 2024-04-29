@@ -4,7 +4,9 @@ set -e
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 cd $SCRIPT_DIR/..
 
-docker compose up --detach
+ENVIRONMENT_FILES="--env-file docker.env.dist --env-file docker.env"
+
+docker compose $ENVIRONMENT_FILES up --detach --wait "$@"
 
 echo
 echo "open http://application.local"
