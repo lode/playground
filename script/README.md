@@ -13,8 +13,9 @@ See further instructions in [README.md](/README.md).
 
 ## Starting / stopping
 
-- `./script/server`
-- `./script/stop-server`
+- `./script/server`: start Docker/Symfony server to use the website or Docker console
+- `./script/stop-server`: stop Docker/Symfony server
+- `./script/logs`: see logs of all Docker services or Symfony server
 
 
 ## Update
@@ -34,11 +35,6 @@ This will updates composer packages and migrates the database.
 - `./script/console root`: get a bash _as root_ in Docker, for installing OS packages
 
 
-## Debug
-
-- `./script/logs`: see logs of all Docker services
-
-
 ## Restart
 
-- `./script/reset`
+- `./script/reset`: remove and setup Docker again
