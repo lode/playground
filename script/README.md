@@ -30,7 +30,8 @@ This will updates composer packages and migrates the database.
 - `./script/symfony <command>`: run a Symfony bin/console command
 - `./script/console <command>`: run a single command in Docker
 - `./script/console`: get a bash into Docker
-- `./script/root-console`: get a bash _as root_ in Docker, for installing OS packages
+- `./script/console database`: get a bash into Docker's database container
+- `./script/console root`: get a bash _as root_ in Docker, for installing OS packages
 
 
 ## Debug

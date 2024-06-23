@@ -11,8 +11,12 @@ fi
 
 ENVIRONMENT_FILES="--env-file docker.env.dist --env-file docker.env"
 
-if [[ $# -eq 0 ]]; then
-	docker compose $ENVIRONMENT_FILES exec --user developer php-fpm bash
+if test "$1" = "root"; then
+    docker compose $ENVIRONMENT_FILES exec php-fpm bash
+elif test "$1" = "database"; then
+    docker compose $ENVIRONMENT_FILES exec mysql bash
+elif test "$#" -eq 0; then
+    docker compose $ENVIRONMENT_FILES exec --user developer php-fpm bash
 else
-	docker compose $ENVIRONMENT_FILES exec --user developer php-fpm "$@"
+    docker compose $ENVIRONMENT_FILES exec --user developer php-fpm "$@"
 fi
