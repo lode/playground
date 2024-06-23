@@ -17,8 +17,17 @@ See further instructions in [README.md](/README.md).
 - `./script/stop-server`
 
 
+## Update
+
+Run after pulling/merging git with changes from others (e.g. `git pull` on `master`).
+This will updates composer packages and migrates the database.
+
+- `./script/update`
+
+
 ## Console
 
+- `./script/symfony <command>`: run a Symfony bin/console command
 - `./script/console <command>`: run a single command in Docker
 - `./script/console`: get a bash into Docker
 - `./script/root-console`: get a bash _as root_ in Docker, for installing OS packages
