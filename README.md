@@ -1,9 +1,20 @@
 # Dev Playground with Docker
 
-To get started clone the repository and open a terminal inside the repository directory.
+The files from this repository can be added to any other project to run it inside Docker.
+
+It is a base from phpdocker.io with some additions
+- Non-root user inside Docker
+- No issues with file ownership
+- `.env` file for configuring Apache & MySQL
+- Scripts to easily manage Docker (install, start, logs, console)
+- Example code for connecting to the database
+
+This repository works well together with [lode/linting-scripts](https://github.com/lode/linting-scripts).
 
 
 ## Install
+
+To get started clone the repository and open a terminal inside the repository directory.
 
 - Install: [Docker Desktop on Mac](https://docs.docker.com/desktop/install/mac-install/), [Docker Engine is enough for Linux](https://docs.docker.com/engine/install/ubuntu/)
     - Mac: no need to sign in with a Docker account when the installer asks you to.
@@ -37,5 +48,6 @@ For managing databases:
 
 ## To Do
 
+- Upgrade mysql
 - Add custom bashrc
 - Setup XDebug

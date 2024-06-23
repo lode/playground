@@ -13,7 +13,7 @@ $contents = files();
 echo '<pre>'.json_encode($contents, JSON_PRETTY_PRINT).'</pre>';
 
 function environment() {
-	return parse_ini_file('../.env');
+	return parse_ini_file('../docker.env');
 }
 
 function database($environment) {
