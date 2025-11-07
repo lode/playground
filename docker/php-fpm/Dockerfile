@@ -7,9 +7,9 @@ ARG USER_ID
 ARG GROUP_ID
 
 # create developer user
-RUN groupadd -f developers
 RUN echo "creating user with UID=${USER_ID} AND GID=${GROUP_ID}"
-RUN useradd -u ${USER_ID} -g ${GROUP_ID} -d /home/developer -g developers -m -s /bin/bash developer 2>/dev/null
+RUN groupadd -f developers -g ${GROUP_ID}
+RUN useradd -u ${USER_ID} -d /home/developer -g developers -m -s /bin/bash developer 2>/dev/null
 
 RUN apt-get update \
     && apt-get -y --no-install-recommends install \
